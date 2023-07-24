@@ -8,12 +8,11 @@ scoop install symfony-cli
 ```  
 4. Clone this repository
 ```
-cd projects/
-git clone ...
+git clone https://github.com/tirednemo/framework.git
 ```
 5. Make Composer install tthe dependencies into the vendor/
 ```
-cd my-project/
+cd framework/
 composer install
 ```
 6. Run the app and navigate to http://127.0.0.1:4321/is_leap_year/{year}

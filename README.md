@@ -20,3 +20,7 @@ composer install
 ```
  symfony server:start --port=4321 --passthru=front.php
  ```
+7. Unit testing
+```
+./vendor/bin/phpunit
+``` 

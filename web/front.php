@@ -4,21 +4,16 @@
 require_once __DIR__.'/../vendor/autoload.php';
 
 use Symfony\Component\HttpFoundation\Request;
-use Symfony\Component\HttpFoundation\Response;
-use Symfony\Component\HttpKernel;
-use Symfony\Component\Routing;
+
+$routes = include __DIR__.'/../src/app.php';
+$container = include __DIR__.'/../src/container.php';
 
 $request = Request::createFromGlobals();
-$routes = include __DIR__.'/../src/app.php';
 
-$context = new Routing\RequestContext();
-$matcher = new Routing\Matcher\UrlMatcher($routes, $context);
+$container->setParameter('charset', 'UTF-8');
+// $container->setParameter('routes', include __DIR__.'/../src/app.php');
 
-$controllerResolver = new HttpKernel\Controller\ControllerResolver();
-$argumentResolver = new HttpKernel\Controller\ArgumentResolver();
-
-$framework = new Simplex\Framework($matcher, $controllerResolver, $argumentResolver);
-$response = $framework->handle($request);
+$response = $container->get('framework')->handle($request);
 
 $response->send();
 

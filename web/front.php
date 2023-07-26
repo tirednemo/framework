@@ -11,7 +11,7 @@ $container = include __DIR__.'/../src/container.php';
 $request = Request::createFromGlobals();
 
 $container->setParameter('charset', 'UTF-8');
-// $container->setParameter('routes', include __DIR__.'/../src/app.php');
+// $container->setParameter('routes', $routes);
 
 $response = $container->get('framework')->handle($request);
 

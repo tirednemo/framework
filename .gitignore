@@ -4,5 +4,9 @@ cache/*
 !cache/.gitkeep
 logs/*
 !logs/.gitkeep
+.vscode/
 .idea/
 .DS_Store
+.phpunit.cache
+.phpunit.result.cache
+/phpunit.xml

@@ -1,6 +1,5 @@
 <?php
 
-// example.com/src/Simplex/StringResponseListener.php
 namespace Simplex;
 
 use Symfony\Component\EventDispatcher\EventSubscriberInterface;

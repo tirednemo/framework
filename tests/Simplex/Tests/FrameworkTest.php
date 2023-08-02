@@ -1,6 +1,5 @@
 <?php
 
-// example.com/tests/Simplex/Tests/FrameworkTest.php
 namespace Simplex\Tests;
 
 use PHPUnit\Framework\TestCase;

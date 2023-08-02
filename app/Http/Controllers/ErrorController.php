@@ -1,7 +1,6 @@
 <?php
 
-// example.com/src/Calendar/Controller/ErrorController.php
-namespace Calendar\Controller;
+namespace App\Http\Controllers;
 
 use Symfony\Component\ErrorHandler\Exception\FlattenException;
 use Symfony\Component\HttpFoundation\Response;

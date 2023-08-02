@@ -1,7 +1,6 @@
 <?php
 
-// example.com/src/Calendar/Model/LeapYear.php
-namespace Calendar\Model;
+namespace App\Model;
 
 class LeapYear
 {

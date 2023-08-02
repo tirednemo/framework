@@ -5,10 +5,22 @@
         "symfony/http-kernel": "^6.3",
         "symfony/event-dispatcher": "^6.3",
         "symfony/dependency-injection": "^6.3",
-        "symfony/var-dumper": "^6.3"
+        "symfony/var-dumper": "^6.3",
+        "illuminate/console": "^10.16",
+        "illuminate/events": "^10.16",
+        "illuminate/container": "^10.16",
+        "illuminate/contracts": "^10.16",
+        "illuminate/filesystem": "^10.16",
+        "illuminate/view": "^10.16",
+        "illuminate/database": "^10.16",
+        "filp/whoops": "^2.15"
     },
     "autoload": {
-        "psr-4": { "": "src/" }
+        "classmap": ["app/console/commands"],
+        "psr-4": {
+            "": "src/",
+            "App\\": "app/"            
+        }
     },
     "require-dev": {
         "phpunit/phpunit": "^10.2"

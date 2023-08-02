@@ -1,6 +1,5 @@
 <?php
 
-// example.com/src/Simplex/ResponseEvent.php
 namespace Simplex;
 
 use Symfony\Component\HttpFoundation\Request;

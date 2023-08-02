@@ -1,0 +1,22 @@
+#!/usr/bin/env php
+<?php
+
+require __DIR__.'/vendor/autoload.php';
+
+use Illuminate\Container\Container;
+use Illuminate\Events\Dispatcher;
+use Illuminate\Console\Application;
+
+$container = new Container;
+$events = new Dispatcher($container);
+
+$artisan = new Application($container, $events, 'Version 1');
+$artisan->setName('Framework');
+
+// Bind default commands
+// $artisan->h(__DIR__.'/vendor/laravel/framework/src/Illuminate/Console');
+
+// Bind a command
+$artisan->resolve(\app\console\commands\HelloWorld::class);
+
+$artisan->run();

@@ -10,14 +10,14 @@ scoop install symfony-cli
 ```
 git clone https://github.com/tirednemo/framework.git
 ```
-5. Make Composer install tthe dependencies into the vendor/
+5. Make Composer install the dependencies into the vendor/
 ```
 cd framework/
 composer install
 ```
-6. Run the app and navigate to http://127.0.0.1:4321/is_leap_year/{year}
+6. Run the app and navigate to http://127.0.0.1:8000/is_leap_year/{year}
 ```
- symfony server:start --port=4321 --passthru=front.php
+ symfony server:start
  ```
 7. Unit testing
 ```

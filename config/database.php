@@ -11,17 +11,17 @@ $capsule->addConnection([
     'host' => 'localhost',
     'database' => 'laravel',
     'username' => 'root',
-    'password' => 'password',
+    'password' => '',
     'charset' => 'utf8',
     'collation' => 'utf8_unicode_ci',
     'prefix' => '',
-], 'mysql');
+]);
 
 $capsule->addConnection([
     'driver'    => 'sqlite',
     'database' => 'E:\Users\Tasnim\Documents\RedDot\framework\database\database.sqlite',
     'prefix' => '',
-]);
+], 'sqlite');
 
 // Set the event dispatcher used by Eloquent models... (optional)
 $capsule->setEventDispatcher(new Dispatcher(new Container));
